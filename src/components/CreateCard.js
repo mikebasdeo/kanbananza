@@ -1,44 +1,44 @@
-import React, { Component } from 'react';
+import React, { Component } from 'react'
 
 class CreateCard extends Component {
   state = {
     title: '',
     description: '',
-  };
+  }
 
   handleChange = (event) => {
-    const { name, value } = event.target;
-    this.setState({ [name]: value });
-  };
+    const { name, value } = event.target
+    this.setState({ [name]: value })
+  }
 
   get isValid() {
-    const { title, description } = this.state;
-    return title && description;
+    const { title, description } = this.state
+    return title && description
   }
 
   get isInvalid() {
-    return !this.isValid;
+    return !this.isValid
   }
 
   handleSubmit = (event) => {
-    event.preventDefault();
+    event.preventDefault()
 
-    if (this.isInvalid) return;
+    if (this.isInvalid) return
 
-    const { onCreateCard } = this.props;
+    const { createCard, listId } = this.props
 
-    if (onCreateCard) {
-      onCreateCard(this.state);
+    if (createCard) {
+      createCard(listId, this.state)
     }
 
     this.setState({
       title: '',
       description: '',
-    });
-  };
+    })
+  }
 
   render() {
-    const { title, description } = this.state;
+    const { title, description } = this.state
 
     return (
       <form className="CreateCard" onSubmit={this.handleSubmit}>
@@ -65,8 +65,8 @@ class CreateCard extends Component {
           disabled={this.isInvalid}
         />
       </form>
-    );
+    )
   }
 }
 
-export default CreateCard;
+export default CreateCard
