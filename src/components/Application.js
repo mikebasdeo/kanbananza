@@ -3,6 +3,7 @@ import React from 'react';
 import Users from './Users';
 import CreateList from './CreateList';
 import Lists from './Lists';
+import ListsContainer from '../containers/ListsContainer';
 
 const Application = () => {
   return (
@@ -10,7 +11,7 @@ const Application = () => {
       <Users />
       <section>
         <CreateList />
-        <Lists />
+        <ListsContainer />
       </section>
     </main>
   );
