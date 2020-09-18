@@ -6,7 +6,7 @@ import CreateCardContainer from '../containers/CreateCardContainer'
 import CardContainer from '../containers/CardContainer'
 
 const List = ({ list = {}, removeList }) => {
-  console.log(JSON.stringify(list, null, 2))
+  // console.log(JSON.stringify(list, null, 2))
   return (
     <article className="List">
       <h2>{list.title}</h2>

@@ -42,7 +42,7 @@
     }
   ],
   "users": [
-    {
+    { 
       "id": "1",
       "name": "Steve Kinney",
       "email": "hello@stevekinney.net"

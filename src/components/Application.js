@@ -1,11 +1,14 @@
-import React from 'react';
+import React from 'react'
 
-import Users from './Users';
-import CreateList from './CreateList';
-import Lists from './Lists';
-import ListsContainer from '../containers/ListsContainer';
+import Users from './Users'
+import CreateList from './CreateList'
+import Lists from './Lists'
+import ListsContainer from '../containers/ListsContainer'
 
 const Application = () => {
+
+  
+  console.log(Symbol())
   return (
     <main className="Application">
       <Users />
@@ -14,7 +17,7 @@ const Application = () => {
         <ListsContainer />
       </section>
     </main>
-  );
-};
+  )
+}
 
-export default Application;
+export default Application

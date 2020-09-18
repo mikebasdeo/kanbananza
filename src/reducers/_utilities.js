@@ -2,6 +2,8 @@ import set from 'lodash/fp/set'
 import get from 'lodash/fp/get'
 import pipe from 'lodash/fp/pipe'
 
+
+// updates to two places required to add a new anything thanks to normaliz
 export const addEntity = (state, entity, id) => {
   return pipe(
     set(['entities', id], entity),

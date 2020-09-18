@@ -2,7 +2,6 @@ import { schema, normalize } from 'normalizr'
 import defaultState from './default-state'
 
 // Step 1 - Schema Creation
-//🖖 since cards references users, users must come first.
 const user = new schema.Entity('users')
 
 const card = new schema.Entity('cards', { assignedTo: user })
